@@ -8,10 +8,10 @@ namespace Biblioteca
 {
     internal class Libro                        // Classe Libro
     {
-        public string Titolo { get; set; }                                            
+        public string Titolo { get; set; }
         public string Autore { get; set; }
         public string Editore { get; set; }
-        public int AnnoDiPubblicazione{ get; set; }
+        public int AnnoDiPubblicazione { get; set; }
         public int NumeroPagine { get; set; }
 
         public Libro(string titolo, int numeroPagine, string autore, int annoDiPubblicazione, string editore)  // Costruttore con tutti i parametri 
@@ -25,6 +25,21 @@ namespace Biblioteca
         public override string ToString()
         {
             return $"{Titolo} by {Autore}, Published in {AnnoDiPubblicazione}, {Editore}, {NumeroPagine}";
+        }
+        public string readingTime() // Metodo per calcolare il tempo di lettura in base al ero di pagine del libro
+        {
+            if (NumeroPagine <= 100)
+            {
+                return "Lettura di un'ora";
+            }
+            else if (NumeroPagine <= 200 && NumeroPagine >= 100)
+            {
+                return "Lettura di due ore";
+            }
+            else
+            {
+                return "Lettura superiore a due ore";
+            }
         }
     }
 }
