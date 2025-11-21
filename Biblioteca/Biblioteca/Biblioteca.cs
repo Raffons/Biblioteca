@@ -22,6 +22,18 @@ namespace Biblioteca
             Libri = new List<Libro>();
         }
 
-       
+        public void AggiungiLibro(Libro libro) // Metodo per aggiungere un libro alla biblioteca
+        {
+            Libri.Add(libro);
+        }
+        public void RimuoviLibro(Libro libro) // Metodo per rimuovere un libro dalla biblioteca
+        {
+            Libri.Remove(libro);
+        }
+        
+        public void NumeroLibri() // Metodo per contare il numero di libri presenti nella biblioteca
+        {
+            Console.WriteLine($"Numero dei libri presenti nella biblioteca: {Libri.Count}");
+        }
     }
 }
