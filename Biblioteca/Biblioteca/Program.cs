@@ -9,6 +9,7 @@ namespace Biblioteca
           Libro libro1 = new Libro();   // Creazione del primo libro
           Biblioteca biblioteca = new Biblioteca ();
           Libro libro2 = new Libro();  // Creazione del secondo libro
+            // NUOVO COMMENTO FINE CLASSE PROGRAM()
 
 
         }
